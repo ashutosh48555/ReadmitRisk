@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit secrets (IMPORTANT - keep API keys private)
+.streamlit/secrets.toml
+
+# Models (keep in repo for deployment)
+# models/*.pkl
+
+# Data (optional - uncomment if dataset is large)
+# dataset/*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Temporary files
+*.tmp
+*.bak

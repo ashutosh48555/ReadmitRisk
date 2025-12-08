@@ -1,0 +1,53 @@
+MIT License
+
+Copyright (c) 2025 ReadmitRisk Project Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+DATASET LICENSE:
+
+This project uses the "Diabetes 130-US hospitals for years 1999-2008 Data Set" 
+from the UCI Machine Learning Repository.
+
+Citation:
+Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, 
+Krzysztof J. Cios, and John N. Clore, "Impact of HbA1c Measurement on Hospital 
+Readmission Rates: Analysis of 70,000 Clinical Database Patient Records," 
+BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.
+
+Dataset URL: https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+
+The dataset is made available by UCI Machine Learning Repository and is free 
+to use for research and educational purposes.
+
+---
+
+DISCLAIMER:
+
+This tool is for EDUCATIONAL and RESEARCH purposes only. It should NOT be used 
+as a substitute for professional medical advice, diagnosis, or treatment. Always 
+seek the advice of your physician or other qualified health provider with any 
+questions you may have regarding a medical condition.
+
+The predictions made by this tool are based on historical data and machine learning 
+models, which may not accurately reflect individual patient circumstances. The 
+developers and contributors of this project are not liable for any decisions made 
+based on the tool's output.
