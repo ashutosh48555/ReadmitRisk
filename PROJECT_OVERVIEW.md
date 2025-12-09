@@ -1125,11 +1125,11 @@ ReadmitRisk-AI/
 ```toml
 # .streamlit/secrets.toml
 GEMINI_API_KEYS = [
-    "AIzaSyDz7VyUTvUAG9ssXjs4uuy5JBGWvluocLU",
-    "AIzaSyByPaq9GHDPR91qkqNBq3AG9R3N4-MmXL0",
-    "AIzaSyCYwGpuslP5PUwJbYlE89THcbwyadjeKjs",
-    "AIzaSyDFfDuUEDo5JYPIlSLD78T7ZDxKSFzg4Aw",
-    "AIzaSyBs_xNXJi_usZbQFVH9G9PSaY2G1ssCAus"
+    "AIzaSyDz7VyUT",
+    "AIzaSyByPaq9",
+    "AIzaSyCYwGpus",
+    "AIzaSyDFfDuUE",
+    "AIzaSyBs_xNXJi_"
 ]
 GEMINI_MODEL = "gemini-2.5-flash"
 ```
