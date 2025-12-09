@@ -577,7 +577,7 @@ def generate_pdf_report(risk_percentage, risk_category, patient_data, risk_facto
             textColor=colors.HexColor('#95a5a6'),
             alignment=TA_CENTER
         )
-        story.append(Paragraph("ReadmitRisk AI © 2025 | INT234 Predictive Analytics Project", footer_style))
+        story.append(Paragraph("ReadmitRisk AI © 2025", footer_style))
         story.append(Paragraph("Powered by Machine Learning & Google Gemini AI", footer_style))
         
         # Build PDF
