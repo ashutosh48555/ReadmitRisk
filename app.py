@@ -297,13 +297,15 @@ def load_gemini_config():
         if hasattr(st, 'secrets'):
             # Support single key (backward compatible)
             if "GEMINI_API_KEY" in st.secrets:
-                api_keys.append(st.secrets["GEMINI_API_KEY"])
+                key = st.secrets["GEMINI_API_KEY"]
+                if key and key.strip():
+                    api_keys.append(key.strip())
             
             # Support multiple keys
             if "GEMINI_API_KEYS" in st.secrets:
                 keys = st.secrets["GEMINI_API_KEYS"]
                 if isinstance(keys, list):
-                    api_keys.extend(keys)
+                    api_keys.extend([k.strip() for k in keys if k and k.strip()])
                 elif isinstance(keys, str):
                     # Support comma-separated string
                     api_keys.extend([k.strip() for k in keys.split(',') if k.strip()])
@@ -311,8 +313,8 @@ def load_gemini_config():
             # Load model configuration
             if "GEMINI_MODEL" in st.secrets:
                 GEMINI_MODEL_NAME = st.secrets["GEMINI_MODEL"]
-    except (FileNotFoundError, KeyError, Exception):
-        pass
+    except (FileNotFoundError, KeyError, Exception) as e:
+        print(f"Error loading secrets: {e}")
     
     # Fallback to environment variables
     if not api_keys:
@@ -331,6 +333,13 @@ def load_gemini_config():
     
     # Remove duplicates while preserving order
     GEMINI_API_KEYS = list(dict.fromkeys(api_keys))
+    
+    # Debug logging
+    if GEMINI_API_KEYS:
+        print(f"✓ Loaded {len(GEMINI_API_KEYS)} Gemini API key(s)")
+    else:
+        print("✗ No Gemini API keys found in secrets or environment variables")
+    
     return len(GEMINI_API_KEYS) > 0
 
 def get_next_api_key():
@@ -346,9 +355,11 @@ def get_next_api_key():
 def init_gemini():
     """Initialize Google Gemini AI with multi-key support and rotation"""
     if not GEMINI_AVAILABLE:
+        print("✗ Google Generative AI package not available")
         return None
     
     if not load_gemini_config():
+        print("✗ Failed to load Gemini API configuration")
         return None
     
     try:
@@ -356,9 +367,13 @@ def init_gemini():
         api_key = get_next_api_key()
         if api_key:
             genai.configure(api_key=api_key)
-            return genai.GenerativeModel(GEMINI_MODEL_NAME)
+            model = genai.GenerativeModel(GEMINI_MODEL_NAME)
+            print(f"✓ Gemini AI initialized successfully with model: {GEMINI_MODEL_NAME}")
+            return model
+        else:
+            print("✗ No API key available for Gemini initialization")
     except Exception as e:
-        print(f"Gemini initialization error: {e}")
+        print(f"✗ Gemini initialization error: {e}")
     
     return None
 
@@ -1060,7 +1075,7 @@ if calculate_button:
             </div>
             """, unsafe_allow_html=True)
     else:
-        st.info("💡 **Enable Gemini AI:** Set GEMINI_API_KEY in Streamlit secrets or environment variables for personalized AI insights!")
+        st.warning("⚠️ **AI Insights Unavailable:** Gemini API keys not configured. Contact your administrator to enable AI-powered insights.")
     
     # Recommendations
     st.markdown('<div class="section-header">💡 Personalized Recommendations</div>', unsafe_allow_html=True)
