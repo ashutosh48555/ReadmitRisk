@@ -3,7 +3,8 @@
 **Developer:** Ashutosh Kumar Singh  
 **Project Type:** Healthcare Machine Learning Application  
 **Dataset:** UCI Diabetes 130-US Hospitals (101,767 patient records)  
-**Objective:** Predict 30-day hospital readmission risk using ensemble machine learning
+**Objective:** Predict 30-day hospital readmission risk using ensemble machine learning  
+**Live Deployment:** [https://readmitrisk.streamlit.app/](https://readmitrisk.streamlit.app/)
 
 ---
 
@@ -1256,6 +1257,8 @@ def get_gemini_response(patient_data, risk_score, feature_importance):
 
 ## 🚀 Deployment & User Interface
 
+**Live Streamlit Deployment:** [https://readmitrisk.streamlit.app/](https://readmitrisk.streamlit.app/)
+
 ### Streamlit Application Features
 
 #### 1. **Patient Input Form**
@@ -1693,6 +1696,7 @@ If you use this project in your research, please cite:
 ## 📧 Contact
 
 **Developer:** Ashutosh Kumar Singh  
+**Live Deployment:** [https://readmitrisk.streamlit.app/](https://readmitrisk.streamlit.app/)  
 **Project Repository:** [GitHub Link]  
 **Documentation:** [This Document]  
 

@@ -13,6 +13,7 @@
 **Performance:** 69.3% AUC-ROC
 
 📖 **[Read Comprehensive Documentation →](PROJECT_OVERVIEW.md)**
+🌐 **[Live Streamlit App →](https://readmitrisk.streamlit.app/)**
 
 ---
 
@@ -179,6 +180,7 @@ See [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) for complete learning outcomes.
 ## 📧 Contact
 
 **Developer:** Ashutosh Kumar Singh  
+**Live Deployment:** [https://readmitrisk.streamlit.app/](https://readmitrisk.streamlit.app/)  
 **Repository:** [GitHub]  
 **Documentation:** [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md)
 
